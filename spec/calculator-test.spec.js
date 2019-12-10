@@ -37,3 +37,21 @@ describe("multiply two numbers", function () {
         expect(calculator_instance.multiply(1, 2, 3, 4)).toBe(24)
     });
 });
+
+//memory slots
+
+describe("calculator must remember previous numbers", function() {
+    let results = new Calculator();
+
+    it("should return 3", function() {
+        results.add(1, 2)
+        // results.set_slot('2')
+        let answer = results.get_slot('2')
+        expect(results.add(answer, "Last")).toEqual(12)
+    });
+
+    it("", function() {
+        results.add(1,2)
+        expect(results.multiply(3, "Last")).toBe(9)
+    })
+});
