@@ -43,15 +43,14 @@ describe("multiply two numbers", function () {
 describe("calculator must remember previous numbers", function() {
     let results = new Calculator();
 
-    it("should return 3", function() {
+    it("should return 18", function() {
         results.add(1, 2)
-        // results.set_slot('2')
         let answer = results.get_slot('2')
-        expect(results.add(answer, "Last")).toEqual(12)
+        expect(results.add(answer, "Last")).toEqual(18)
     });
 
-    it("", function() {
+    it("should return 15", function() {
         results.add(1,2)
-        expect(results.multiply(3, "Last")).toBe(9)
+        expect(results.multiply(5, "Last")).toBe(15)
     })
 });
