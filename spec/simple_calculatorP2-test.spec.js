@@ -1,4 +1,4 @@
-const { Calculator } = require('../src/calculator')
+const { Calculator } = require('../src/simple_calculatorP2')
 
 describe("calculate the total", function () {
     let calculator_instance = new Calculator();
