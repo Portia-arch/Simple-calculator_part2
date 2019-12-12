@@ -39,8 +39,23 @@ describe("multiply two numbers", function () {
 });
 
 //memory slots
+describe("calculator must remember previous number", function(){
+    let results = new Calculator();
+    
+    it("Should take single number as slot number", function () {
+        results.add(5, 4);
+        expect(results.get_slot(1)).toEqual(9);//should display what is in slot 1
+    });
 
-describe("calculator must remember previous numbers", function() {
+    it("Should take slot number and add with a number", function () {
+        results.add(5, 4)
+        results.get_slot(1);
+        expect(results.add("slot_1", 2)).toBe(11);
+    });
+});
+
+//last
+describe("last returns the results of the last  function called", function() {
     let results = new Calculator();
 
     it("should return 18", function() {
@@ -52,5 +67,5 @@ describe("calculator must remember previous numbers", function() {
     it("should return 15", function() {
         results.add(1,2)
         expect(results.multiply(5, "Last")).toBe(15)
-    })
+    });
 });
